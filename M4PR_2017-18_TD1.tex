@@ -1,0 +1,139 @@
+\documentclass[a4paper,11pt,reqno]{amsart}
+\usepackage{M4ParcRenf}
+
+\begin{document}
+
+% ===================================================================
+\hautdepage{TD1: Espaces probabilisés}
+% ===================================================================
+
+
+%-----------------------------------
+\begin{exo}
+
+  Trois enfants lancent chacun un ballon en direction d'un panier de basket. Il est convenu que celui qui marquera gagnera un paquet de bonbons, et qu'en cas d'ex-æquo les vainqueurs se partageront le paquet. Si personne ne réussit son panier, chacun mangera le tiers des bonbons.
+  \begin{enumerate}
+    \item Préciser un univers $\Omega$ permettant de décrire cette expérience.
+    \item En utilisant les événements:
+      \vspace{-2ex}
+      \begin{align*}
+        A & = \{\text{Arthur marque un panier}\},\\
+        B & = \{\text{Béatrice marque un panier}\},\\
+        C & = \{\text{Cécile marque un panier}\},
+      \end{align*}
+      écrire de façon ensembliste les événements suivants:
+      \begin{align*}
+        D & = \{\text{tous les trois réussissent à marquer}\},&
+        E & = \{\text{aucun ne réussit à marquer}\},\\
+        F & = \{\text{Béatrice mange tous les bonbons}\},&
+        G & = \{\text{les trois enfants mangent des bonbons}\},\\
+        H & = \{\text{Cécile mange au moins un bonbon}\},&
+        I & = \{\text{Arthur ne reçoit aucun bonbon}\}.
+      \end{align*}
+    \item Parmi tous ces événements, lesquels sont des événements élémentaires?
+  \end{enumerate}
+
+\end{exo}
+
+
+%-----------------------------------
+\begin{exo}
+
+    Soit $n\in \N^*$. On tire à pile ou face $n$ fois.
+
+    \begin{enumerate}
+      \item Donner une représentation  de l'espace $\Omega$ des événements
+      élémentaires de cette expérience.
+
+      \item Écrire l'événement $F=$\{pile n'a pas été obtenu lors
+      des 2 premiers lancers\} comme sous-ensemble de $\Omega$.
+
+      \item Soit $i\in \{1,\ldots,n\}$.
+      Décrire les éléments de l'événement $E_i=$
+      \{le résultat du $i$-ième lancer est pile\}.
+
+      \item Écrire à l'aide des événements $E_i$ l'événement $F$.
+
+      \item Écrire à l'aide des événements $E_i$ l'événement
+      $G=$\{la pièce est tombée au moins une fois sur pile\}.
+
+      \item Écrire à l'aide des ensembles $E_i$ l'événement
+      $H=$\{la pièce est tombée au moins deux fois sur pile\}.
+    \end{enumerate}
+
+\end{exo}
+
+
+%-----------------------------------
+\begin{exo}
+
+  On tire, une à une, sans les remettre dans le paquet, cinq cartes dans un jeu de 32 cartes; chaque succession de cartes  ainsi tirées s'appelle une main.
+  \begin{enumerate}
+    \item Quel est l'espace de probabilité que vous considérez ?
+    \item Quelle est la probabilité qu'une main  contienne :
+    \begin{enumerate}
+      \item Que des cartes d'une même couleur\footnote{Dans le jeu de cartes il y a 4 couleurs : $\spadesuit$, $\heartsuit$, $\clubsuit$ et $\diamondsuit$.} ?
+      \item Exactement trois rois? Au plus un roi? Au moins un roi ou un as?
+    \end{enumerate}
+    \item Mêmes questions si le tirage se fait avec remise.
+  \end{enumerate}
+\end{exo}
+
+
+%-----------------------------------
+\begin{exo}
+
+  On relève les dates d'anniversaire dans un groupe de $30$ personnes (jours numérotés de $1$ à $365$). On suppose que les jours de naissance sont équiprobables. Quelle est la probabilité que deux personnes au moins aient le même anniversaire?
+
+\end{exo}
+
+
+%-----------------------------------
+\begin{exo}
+
+  \begin{enumerate}
+    \item En dénombrant les façons de tirer $n$ boules parmi $n$ boules blanches et $n$ boules noires, montrer que:
+      $$
+        C_{2n}^n=\sum_{k=0}^n (C_n^k)^2.
+      $$
+
+    \item Retrouver cette formule à partir de l'identité $(1+t)^n(1+t)^n=(1+t)^{2n}$.
+    \item Deux personnes lancent chacune $n$ fois une pièce de monnaie. Quelle est la probabilité $p_n$ qu'elles obtiennent le même nombre de piles?
+
+    \begin{indication}
+      On utilisera l'équiprobabilité sur l'espace $\Omega=\{{\tt f}, {\tt p}\}^{2n}$.
+    \end{indication}
+
+    \item Donner un équivalent de $p_n$ quand $n$ tend vers $+\infty$.
+
+    \begin{indication}
+      On rappelle la formule de Stirling:
+        $$
+          n!=\sqrt{2\pi n}\Big(\frac{n}{e}\Big)^{n}(1+\varepsilon_n),\quad\text{avec}\quad \lim_{n\to +\infty} \varepsilon_n=0.
+        $$
+    \end{indication}\hspace{-\baselineskip}
+
+    \item Que pensez vous de l'affirmation suivante: \emph{Lorsqu'on jette un grand nombre (pair) de fois une pièce équilibrée, il y a une forte probabilité d'obtenir exactement autant de piles que de faces} ?
+  \end{enumerate}
+
+\end{exo}
+
+
+%-----------------------------------
+\begin{exo}
+
+  Une personne un peu distraite a tapé $ N $ lettres et préparé $ N $ enveloppes portant les adresses des destinataires, mais elle répartit au hasard les lettres dans les enveloppes. Pour modéliser cette situation, on choisit comme espace probabilisé $ \Omega_N $ ensemble de toutes les permutations sur $ \{ 1,\ldots,N \} $ muni de l'équiprobabilité $ P_N $. Pour $ 1 \le j \le N $, on note $ A_j $ l'événement \emph{la $ j$-ième lettre se trouve dans la bonne enveloppe}.
+  \begin{enumerate}
+    \item Calculer $ P_N(A_j) $.
+
+    \item On fixe $ k $ entiers $ i_1 < i_2 < \cdots < i_k $ entre $ 1 $ et $ N $. Dénombrer toutes les permutations $ \sigma $ sur $ \{1,\ldots,N\} $ telles que $ \sigma(i_1)=i_1 $, $ \sigma(i_2)=i_2 $, \ldots, $ \sigma(i_k)=i_k $. En déduire $ P_N(  A_{i_1} \cap A_{i_2} \cap \cdots \cap A_{i_k} ) $.
+
+    \item On note $ B $ l'événement \emph{au moins une des lettres est dans la bonne enveloppe}. Exprimer $ B $ à l'aide des $ A_j $.
+
+    \item Utiliser la formule de Poincaré pour calculer $ P_N(B) $ et sa limite quand $ N $ tend vers l'infini.
+  \end{enumerate}
+
+\end{exo}
+
+
+\end{document}

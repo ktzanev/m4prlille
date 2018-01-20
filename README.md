@@ -1,0 +1,21 @@
+# [m4prlille](https://github.com/ktzanev/m4prlille)
+
+Les feuilles de TD du module de mathématiques au S4 du Parcours Renforcé (MIMP) «Probabilités et Fonctions» de l'Université de Lille.
+
+### 2017/18
+
+Vous pouvez récupérer [ce dépôt](https://github.com/ktzanev/m4prlille) de deux façons faciles :
+
+- en téléchargeant l'archive [zip](https://github.com/ktzanev/m4prlille/archive/master.zip) qui contient la dernière version des fichiers,
+- récupérer l'intégralité de ce dépôt, y compris l'historique des modifications, en utilisant `git` avec la commande
+
+  ~~~~~~~
+  git clone git@github.com:ktzanev/m4prlille.git
+  ~~~~~~~
+
+Dans [ce dépôt](https://github.com/ktzanev/m4prlille) vous pouvez trouver les sources LaTeX et les PDFs (compilés avec XeLaTeX) suivants :
+
+- Test de positionnement [[tex](https://rawgit.com/ktzanev/m4prlille/master/M4PR_2017-18_Test.tex)] [[pdf](https://rawgit.com/ktzanev/m4prlille/master/M4PR_2017-18_Test.pdf)]
+- Feuille n°1 [[tex](https://rawgit.com/ktzanev/m4prlille/master/M4PR_2017-18_TD1.tex)] [[pdf](https://rawgit.com/ktzanev/m4prlille/master/M4PR_2017-18_TD1.pdf)]
+
+Pour compiler ces feuilles de td vous avez besoin de la feuille de style [M67tds.sty](https://rawgit.com/ktzanev/m4prlille/master/M67tds.sty).
