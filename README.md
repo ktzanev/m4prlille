@@ -2,6 +2,8 @@
 
 Les feuilles de TD du module de mathématiques au S4 du Parcours Renforcé (MIMP) «Probabilités et Fonctions» de l'Université de Lille.
 
+Les feuilles de TD de la partie «probabilités» sont (quasiment) identiques à celles de [M43](https://github.com/ktzanev/m43lille1).
+
 ### 2017/18
 
 Vous pouvez récupérer [ce dépôt](https://github.com/ktzanev/m4prlille) de deux façons faciles :
@@ -17,6 +19,6 @@ Dans [ce dépôt](https://github.com/ktzanev/m4prlille) vous pouvez trouver les 
 
 - Test de positionnement [[tex](https://rawgit.com/ktzanev/m4prlille/master/M4PR_2017-18_Test.tex)] [[pdf](https://rawgit.com/ktzanev/m4prlille/master/M4PR_2017-18_Test.pdf)]
 - Feuille n°1 [[tex](https://rawgit.com/ktzanev/m4prlille/master/M4PR_2017-18_TD1.tex)] [[pdf](https://rawgit.com/ktzanev/m4prlille/master/M4PR_2017-18_TD1.pdf)]
-- Feuille n°1 [[tex](https://rawgit.com/ktzanev/m4prlille/master/M4PR_2017-18_TD2.tex)] [[pdf](https://rawgit.com/ktzanev/m4prlille/master/M4PR_2017-18_TD2.pdf)]
+- Feuille n°2 [[tex](https://rawgit.com/ktzanev/m4prlille/master/M4PR_2017-18_TD2.tex)] [[pdf](https://rawgit.com/ktzanev/m4prlille/master/M4PR_2017-18_TD2.pdf)]
 
 Pour compiler ces feuilles de td vous avez besoin de la feuille de style [M67tds.sty](https://rawgit.com/ktzanev/m4prlille/master/M67tds.sty), et du logo du département [ul-fst-math_noir.pdf](https://ktzanev.github.io/logolabopp/ul-fst-math/ul-fst-math_noir.pdf).
