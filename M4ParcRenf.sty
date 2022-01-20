@@ -20,6 +20,8 @@
 \setlength{\belowdisplayshortskip}{2pt plus 4pt}
 % ------------- Les standards
 \usepackage{mathtools,amssymb,bm,amsthm}
+\usepackage{mathabx} % pour les doubles crochets \ldbrack, \rdbrack d'intervalles d'entiers et \leq français
+\usepackage{xfrac} % pour les \sfrac
 \usepackage[french]{babel}
 \usepackage[babel=true]{csquotes}
 \frenchspacing
@@ -59,14 +61,19 @@
 % Les exercices
 \newcounter{numeroexo}
 \setcounter{numeroexo}{0}
-\def\exoimg{\tikz[overlay]{\NoAutoSpacing;\draw[blue, opacity=0.7] (-0.1,0.4) -- (-0.1,-2.1) (-0.4,-0.1) -- (2.1,-0.1);}}
+\newlength{\imgheight}\setlength{\imgheight}{7mm}
+\def\exoimg{\tikz[overlay]{\NoAutoSpacing;\draw[blue, opacity=0.7] (-0.1,0.4) -- (-0.1,-3\imgheight) (-0.14,0.4) -- (-0.14,-2\imgheight) (-0.4,-0.1) -- (2.1,-0.1);}}
 
 \newlength{\afterexo}\setlength{\afterexo}{3mm plus 4mm}
 \newenvironment{exercice}[1]
    {\needspace{4\baselineskip}\vspace{1mm}\par\refstepcounter{numeroexo}\hspace*{-1mm}\noindent{\exoimg\bfseries\sffamily #1 \arabic{numeroexo}}}
    {\par\vspace{\afterexo}}
 
-\newenvironment{exo}{\setcounter{equation}{0}\begin{exercice}{Exercice} \normalfont}{\end{exercice}}
+\newenvironment{exo}[1][1]{
+  \setcounter{equation}{0}
+  \setlength{\imgheight}{#1\imgheight}
+  \begin{exercice}{Exercice} \normalfont}%
+  {\end{exercice}}
 
 % les questions
 \renewcommand{\theenumi}{\alph{enumi}}
@@ -93,9 +100,7 @@
 \def\Z{\mathbb{Z}}
 \def\Q{\mathbb{Q}}
 
-\def\tri{\scalebox{0.77}{$\triangle$}\kern1pt} % ou \def\tri{{\scriptstyle\triangle}}
-
-\let\ens\mathcal % pour ecrire les ensembles ainsi \ens D
+\def\non#1{\overline{#1}}
 
 % -------------- Pour les figures
 \usepackage{graphicx}
@@ -111,6 +116,15 @@
   #3
 \end{minipage}%
 }
+
+% ---- Les solutions
+\usepackage{environ}
+\newif\ifsolutions\solutionsfalse % par defaut les solution sont cachées
+\newcommand{\sisolutions}[1]{\ifsolutions #1\fi}
+\newcommand{\sisujet}[1]{\ifsolutions\else #1\fi}
+\def\exosol{\tikz[overlay]{\draw[red, opacity=0.7] (-0.1,0.9) -- (-0.1,-1.6) (-0.4,0.4) -- (2.1,0.4);}}
+\NewEnviron{solution}{\ifsolutions\needspace{2\baselineskip}\hspace*{-1mm}\noindent{\exoimg\bfseries\sffamily Solution: }\BODY\par\vspace{\afterexo}\fi}
+
 
 % ---- haut de la page ------
 \newcommand{\hautdepage}[1]{
