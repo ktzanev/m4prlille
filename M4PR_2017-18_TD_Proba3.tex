@@ -1,0 +1,103 @@
+\documentclass[a4paper,11pt,reqno]{amsart}
+\usepackage{M4ParcRenf}
+
+\begin{document}
+
+% ===================================================================
+\hautdepage{Fiche 3: Variables aléatoires discrètes}
+% ===================================================================
+
+
+%-----------------------------------
+\begin{exo}
+
+  On jette un dé bleu et un dé vert non pipés et on considère la v.a. $X$ égale à
+  la somme des points obtenus. Quelle est la loi de $X$? Même question pour la v.a. $Y$ égale au minimum des deux points obtenus.
+
+\end{exo}
+
+%-----------------------------------
+\begin{exo}
+
+  Une urne contient $N$ jetons numérotés de 1 à $N$. On en tire $m\leq N$ au hasard et sans remise. Soit $k\in \{1,\ldots,N\}$.
+
+  \begin{enumerate}
+    \item Décrire  un espace de probabilité $(\Omega,\mathcal{P}(\Omega),P)$  associé à l'expérience aléatoire.
+    \item Quelle est la probabilité que les jetons tirés aient tous des numéros inférieurs ou égaux à~$k$?
+    \item On désigne par $X$ la variable égale au plus grand numéro des jetons tirés. Déterminer la loi de $X$.
+    \item Mêmes questions avec un tirage avec remise.
+  \end{enumerate}
+
+\end{exo}
+
+%-----------------------------------
+\begin{exo}
+
+  \begin{enumerate}
+    \item Quelle est la probabilité d'obtenir un double lorsqu'on lance une fois une paire de dés?
+    \item On lance de façon répétée une paire de dés jusqu'à la première obtention d'un double. Soit $X$ la variable aléatoire égale au nombre de lancers ainsi réalisés. Donner, en justifiant votre réponse, les valeurs de $P(X=1)$, $P(X=2)$ et plus généralement $P(X=k)$ où $k\geq 1$ est un entier quelconque. Comment s'appelle la loi de $X$?
+    \item Soit $n\geq 1$ un nombre entier. Calculer \emph{directement} la probabilité de n'obtenir aucun double lors des $n$ premiers lancers. En déduire $P(X>n)$.
+    \item Pour $k>n$, vérifier que
+      $$
+        P_{X>n}(X=k)=P(X=k-n).
+      $$
+    Donner une interprétation.
+  \end{enumerate}
+
+\end{exo}
+
+%-----------------------------------
+\begin{exo}
+
+  Quatre chasseurs tirent indépendamment les uns des autres  chacun un coup de fusil  sur un bison en fuite. Chaque chasseur a une chance sur 4 de toucher le bison. On suppose qu'il faut au moins 3 balles pour tuer un bison.
+
+  \begin{enumerate}
+    \item Quelle est la loi de la v.a. $X$ égale au nombre de balles touchant le bison?
+    \item Quelle est la probabilité que l'animal soit touché?
+    \item Quelle est la probabilité qu'il soit tué?
+    \item Sachant qu'il a été touché, quelle est la probabilité qu'il soit simplement blessé?
+  \end{enumerate}
+
+\end{exo}
+
+%-----------------------------------
+\begin{exo}
+
+  Soit $X$ une v.a. de Poisson de paramètre $\lambda>0$. On définit la v.a. $Y$ de la manière suivante:
+  $$
+    Y =
+      \begin{dcases*}
+        0           & si $X$ prend une valeur nulle ou impaire,\\
+        \frac{X}{2} & si $X$ prend une valeur paire.
+      \end{dcases*}
+  $$
+  Trouver la loi de $Y$.
+
+\end{exo}
+
+%-----------------------------------
+\begin{exo}
+
+  Un écran d'ordinateur est formé de petits points lumineux appelés pixels. Il comporte 768 lignes de 1024 pixels, soit 786432 pixels en tout.
+  \begin{enumerate}
+      \item On utilise un procédé de fabrication qui assure que les pixels sont indépendants et que chacun n'a qu'une probabilité $ 9.10^{-7} $ d'être inutilisable. Quelle est la loi du nombre $ X $ de pixels grillés sur l'écran?
+      \item L'écran est invendable si trois pixels au moins sont grillés. Calculer (en justifiant!) une valeur approchée de la probabilité pour un écran d'être invendable.
+  \end{enumerate}
+
+\end{exo}
+
+%-----------------------------------
+\begin{exo}
+
+  Une entreprise fabrique des chaises à roulettes, équipées chacune de 5 roulettes.
+
+  \begin{enumerate}
+    \item Par suite d'une erreur de livraison, l'entreprise a reçu 10\,000 roulettes en bon état et 1\,000 roulettes présentant un défaut de fabrication. Parmi les 2\,200 chaises ainsi fabriquées, on en teste une au hasard. Calculer avec précision la probabilité que ses cinq roulettes soient en bon état.
+    \item Quelle est la loi du nombre $ X $ de roulettes défectueuses dont est munie la chaise testée? Par quelle loi peut-on l'approcher? En utilisant cette approximation, évaluer la probabilité que la chaise testée ait exactement une roulette défectueuse, et la probabilité qu'elle en ait exactement trois.
+    \item En utilisant la même approximation, calculer la probabilité que la chaise soit en bon état et comparer avec le résultat de la première question.
+  \end{enumerate}
+
+\end{exo}
+
+
+\end{document}

@@ -1,0 +1,93 @@
+\documentclass[a4paper,11pt,reqno]{amsart}
+\usepackage{M4ParcRenf}
+
+% \solutionstrue
+
+\begin{document}
+
+% ==================================
+\hautdepage{
+
+\ifsolutions{Solutions de l'interrogation}\else{Interrogation}\fi\par\normalfont\normalsize
+14 février 2018\\{[ durée: 1 heure ]}\par
+}
+% ==================================
+\ifsolutions\else
+% {\fontencoding{U}\fontfamily{futs}\selectfont\char 66\relax}
+\tikz[baseline=(e.base)]{\NoAutoSpacing\node(e){!};\draw[red,ultra thick,line join=round,yshift=-.15ex](90:1em)--(210:1em)--(330:1em)--cycle;}
+\textbf{Les documents et les calculatrices ne sont pas autorisés.}
+
+\hfill
+\fi
+
+%-----------------------------------
+\begin{exo}
+
+  Dans un jeu de $3$ dés, il y un des dés qui est truqué, et qui ne tombe jamais sur $6$ (les cinq autres faces sont équiprobables). On jette les $3$ dés et on observe.
+  \begin{enumerate}
+    \item Quel est l'espace de probabilité que vous considérez? Quelle est la probabilité d'un événement élémentaire?
+
+    \item Quelle est la probabilité d'obtenir $3$ dés identiques?
+
+    \item Quelle est la probabilité d'obtenir exactement $2$ dés identiques?
+  \end{enumerate}
+\end{exo}
+
+\begin{solution}
+  \begin{enumerate}
+    \item L'espace de probabilité considéré est $\Omega = \{1,\ldots,5\} \times \{1,\ldots,6\}^{2}  $ avec la probabilité uniforme. Comme le nombre d'éléments de $\Omega$ est $\#\Omega = 5 \times 6^{2}=180$, la probabilité d'obtenir une configuration particulière (un événement élémentaire) est de $\frac{1}{180}$.
+
+    \item L'événement $3 \times 6$ est impossible, et pour tout autre $i=1,\ldots,5$, la probabilité d'obtenir $3 \times i$ est de $\frac{1}{180}$. Donc la probabilité d'obtenir $3$ dés identiques est de $5\times\frac{1}{180} = \frac{1}{36}$.
+
+    \item Le nombre de configurations avec trois résultats différents est $5 \times 5 \times 4 = 100$. Donc la probabilité d'avoir les trois dés différents est $\frac{100}{180}=\frac{5}{9}$. Ainsi finalement la probabilité d'avoir deux dés identiques est $1-\frac{1}{36}-\frac{5}{9} = \frac{15}{36} = \frac{5}{12}$.
+  \end{enumerate}
+\end{solution}
+
+%-----------------------------------
+\begin{exo}
+
+  Un enseignant pose une question à un étudiant qui doit répondre par oui ou non. On sait que l'étudiant connaît la bonne réponse avec probabilité $p$ et dans ce cas il donne la bonne réponse. Si l'étudiant ne connaît pas la réponse, il répond alors au hasard «oui» ou «non» avec probabilité \sfrac12 chacun.
+
+  En écrivant proprement les événements en jeu, calculer les probabilités:
+  \begin{enumerate}
+    \item que l'étudiant donne la bonne réponse,
+
+    \item que l'étudiant connaisse la bonne réponse sachant qu'il a répondu correctement.
+  \end{enumerate}
+\end{exo}
+
+\begin{solution}
+
+\begin{enumerate}
+  \item On note $C=$«l'étudiant connaît la bonne réponse» et $R$=«l'étudiant donne la bonne réponse». D'après l'énoncé on a $P(C)=p$, $P(R|C)=1$ et $P(R|\non{C})=\frac12$. Ainsi $P(R) = P(R|C)P(C) + P(R|\non{C})P(\non{C}) = 1p+\frac{1}{2}(1-p)=\frac{1+p}{2}$.
+  \item Nous avons $P(C|R) = \frac{P(R|C)P(C)}{P(R)} = \frac{2p}{1+p}$.
+\end{enumerate}
+
+\end{solution}
+
+%-----------------------------------
+\begin{exo}
+
+   Dans un lot de 100 composants électroniques, il y a deux composants défectueux. On prélève au hasard sans remise $n$ composants dans ce lot et on note $X$ le nombre de composants défectueux parmi les $n$ prélevés.
+  \begin{enumerate}
+    \item On suppose que $2 \le n \le 98.$ Donner la loi de $X$.
+    \item Quelle est la loi de $X$ si $n=100$ ?
+    \item Je choisis un composant au hasard. Quelle est la probabilité qu'il soit défectueux ?
+    \item En déduire la loi de $X$ si $n=1$.
+    \item En déduire aussi la loi de $X$ si $n=99$.
+  \end{enumerate}
+\end{exo}
+
+\begin{solution}
+  \begin{enumerate}
+    \item Comme il s'agit d'un tirage sans remise de $n$ éléments parmi $100$ et $X$ compte l'apparition de $2$ de ces éléments, on a $X \sim \mathcal{HG}(100,n,2)$ avec $X \in \{0,1,2\}$ et $P(X=k) = \frac{C_{2}^{k}C_{98}^{n-k}}{C_{100}^{n}}$ pour $k=0,1,2$. Cette formule marche pour tout $n \in \ldbrack 0,100 \rdbrack$, non seulement pour $2 \leq n \leq 98$.
+    \item Si on prend les $100$ composants électroniques on sait que $X=2$, donc $X$ est une constante et $P(X=2)=1$. On retrouve ce résultat avec la formule générale car $P(X=k) = \frac{C_{2}^{k}C_{98}^{100-k}}{C_{100}^{100}}$ et $C_{98}^{100}=C_{98}^{99}=0$, donc $P(X=0)=P(X=1)=0$ et $P(X=2) = \frac{C_{2}^{2}C_{98}^{98}}{C_{100}^{100}}=1$.
+    \item $P(\text{«un composant défectueux»}) = \frac{2}{100}$.
+    \item Pour $n=1$ nous avons $X \in \{0,1\}$ et d'après la question précédente on a $P(X=1)=\frac{2}{100}$ et $P(X=0)=1-P(X=1)=\frac{98}{100}$. On peut retrouver ce résultat par la formule générale : $P(X=0) = \frac{C_{2}^{0}C_{98}^{1}}{C_{100}^{1}} = \frac{98}{100}$, $P(X=1) = \frac{C_{2}^{1}C_{98}^{0}}{C_{100}^{1}} = \frac{2}{100}$ et $P(X=2) = \frac{C_{2}^{2}C_{98}^{-1}}{C_{100}^{1}} = 0$.
+    \item Si on pose $Y=$«le nombre de composants défectueux parmi les $100-n$ non prélevés», nous avons $X+Y=2$ et $Y \sim \mathcal{HG}(100,100-n,2)$. Ainsi pour $n=99$ on a $Y \sim \mathcal{HG}(100,1,2)$ et donc d'après la question précédente $P(X=2)=P(Y=0)=\frac{98}{100}$, $P(X=1)=P(Y=1)=\frac{2}{100}$ et $P(X=0)=P(Y=2)=0$. On peut, comme dans les questions précédentes, retrouver ce résultat par la formule générale.
+  \end{enumerate}
+\end{solution}
+
+\end{document}
+
+

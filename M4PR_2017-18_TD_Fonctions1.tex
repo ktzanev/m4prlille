@@ -1,0 +1,117 @@
+\documentclass[a4paper,11pt,reqno]{amsart}
+\usepackage{M4ParcRenf}
+
+\begin{document}
+
+% ===================================================================
+\hautdepage{Fiche 5: Suites et séries de fonctions}
+% ===================================================================
+
+
+%-----------------------------------
+\begin{exo} (Inversion des limites)
+
+  Montrer et discuter l'inversion des limites :
+  \begin{enumerate}
+    \item
+      $\forall n \in \mathbb{N},\ \lim_{m \to +\infty} \frac{m}{n}= +\infty$, mais
+      $\forall m \in \mathbb{N},\ \lim_{n \to +\infty} \frac{m}{n}= 0$.
+    \item
+      $\forall a \in \mathbb{R}_{+},\ \lim_{x\to+\infty} ae^{−x} = 0$, mais
+      $\forall x \in \mathbb{R}_{+},\ \lim_{a\to+\infty} ae^{−x} = +\infty$.
+    \item
+      $\forall n \in \mathbb{N},\ \lim_{x\to 1^{−}} x^{n} = 1$, mais
+      $\forall x \in [0, 1[,\ \lim_{n\to +\infty} x^{n} = 0$.
+    \item
+      $\forall n \in \mathbb{N},\ \lim_{x\to 1^{+}} x^{n} = 1$, mais
+      $\forall x \in]1, +\infty[,\ \lim_{n\to +\infty} x^{n} = +\infty $.
+    \item
+      $\forall n \in \mathbb{N},\ \lim_{x\to 1^{−}} \sum_{k=0}^{2n} (−x)^{k} = 0$, mais
+      $\forall x \in [0, 1[,\ \sum_{k=0}^{\infty} (−x)^{k} = \frac{1}{1 + x}$.
+  \end{enumerate}
+
+\end{exo}
+
+%-----------------------------------
+\begin{exo} (L'exponentiel)
+
+  \begin{enumerate}
+    \item Étudier la convergence de la suite $\dfrac{x^{n}}{n!}$ (où $\dfrac{x^{0}}{0!}=1, \forall x \in \mathbb{R}$).
+    \item Étudier la convergence de la série $\sum_{n \geq 0}\dfrac{x^{n}}{n!}$.
+    \item Montrer que $f(x)=\sum_{n = 0}^{\infty}\dfrac{x^{n}}{n!}$ vérifie $f'(x)=f(x)$ sur tout intervalle borné.
+    \item Conclusion ?
+  \end{enumerate}
+\end{exo}
+
+%-----------------------------------
+\begin{exo} (Non interversion limite-dérivée)
+
+  \begin{enumerate}
+    \item Étudier la convergence de la suite $f_{n}(x)=nxe^{-nx}$ sur $\mathbb{R}_{+}$.
+    \item Comparer $\lim_{n\to\infty} f'_{n}(x)$ et $\left(\lim_{n\to\infty} f_{n}(x)\right)'$.
+    \item Étudier la convergence de la série $\sum f_{n}$.
+  \end{enumerate}
+\end{exo}
+
+%-----------------------------------
+\begin{exo} (Suite dépendant d'un paramètre)
+
+  Soit $\alpha \in \mathbb{R}$ et $f_n(x) = n^\alpha x(1-x)^n$ pour $x \in {[0,1]}$.
+  \begin{enumerate}
+    \item Trouver la limite simple des fonctions $f_n$.
+    \item Y a-t-il convergence uniforme ?
+  \end{enumerate}
+\end{exo}
+
+
+%-----------------------------------
+\begin{exo} (Non interversion limite-intégrale)
+
+  Soit $f_n(x) = n\cos^nx\sin x$.
+  \begin{enumerate}
+    \item Chercher la limite simple, $f$, des fonctions $f_n$.
+    \item Vérifier que $ \int_{t=0}^{\pi/2} f(t)\,d t\ne \lim_{n\to\infty}  \int_{t=0}^{\pi/2} f_n(t)\,d t$.
+  \end{enumerate}
+\end{exo}
+
+
+%-----------------------------------
+\begin{exo}
+
+  Soit $f : {\mathbb{R}_{+}} \to \R$ continue, non identiquement nulle, telle que $f(0) = 0$ et $f(x) \to 0$ lorsque $x\to+\infty$. On pose $f_n(x) = f(nx)$ et $g_n(x) = f\left(\frac{x}{n}\right)$.
+
+  \begin{enumerate}
+    \item Donner un exemple de fonction $f$.
+    \item Montrer que $f_n$ et $g_n$ convergent simplement vers la fonction nulle,
+      et que la convergence n'est pas uniforme sur $\mathbb{R}_{+}$.
+    \item Si $ \int_{t=0}^{+\infty} f(t)\,d t$ converge, chercher
+         $\lim_{n\to\infty}  \int_{t=0}^{+\infty} f_n(t)\,d t$ et
+         $\lim_{n\to\infty}  \int_{t=0}^{+\infty} g_n(t)\,d t$.
+  \end{enumerate}
+\end{exo}
+
+
+%-----------------------------------
+\begin{exo}
+
+  \begin{enumerate}
+    \item Étudier la convergence simple, uniforme, de la série de fonctions $\sum_{n\geq 0} ne^{-nx}$.
+    \item Déterminer le domaine maximal de définition de $f(x) = \sum_{n=0}^\infty ne^{-nx}$.
+    \item Calculer $f(x)$ lorsque la série converge (intégrer terme à terme).
+  \end{enumerate}
+\end{exo}
+
+
+%-----------------------------------
+\begin{exo}
+
+  Soit $\displaystyle f(x) = \sum_{n=0}^\infty \frac1{x(x+1)\dots(x+n)}$.
+  \begin{enumerate}
+    \item \'Etablir l'existence et la continuité de $f$ sur $\R^{+*}$.
+    \item Calculer $f(x+1)$ en fonction de $f(x)$.
+    \item Tracer la courbe de $f$.
+\end{enumerate}
+\end{exo}
+
+
+\end{document}
